@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Movie from "./Movie";
 import axios from 'axios';
+import {Link} from "react-router-dom";
 
 const MovieForm = (props) => {
     const [movie, setMovie] = useState({
@@ -47,8 +48,8 @@ const MovieForm = (props) => {
             title: props.singleMovie.title,
             director: props.singleMovie.director,
             metascore: props.singleMovie.metascore,
+            stars: movie.stars.concat(movie.star),
             star: "",
-            stars: props.singleMovie.stars
         })
     }
 
@@ -82,7 +83,7 @@ const MovieForm = (props) => {
                 name="star"
                 onChange={handleChange}
             />
-            <button onClick={handleClick}> Update </button>
+            <Link to="/"><button onClick={handleClick}> Update </button></Link>
 
         </form>
     )
