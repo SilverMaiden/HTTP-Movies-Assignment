@@ -29,7 +29,7 @@ const MovieCard = props => {
           {star}
         </div>
       ))}
-      <button onClick={handleClick}> Delete Movie<Redirect to="/"></Redirect>
+      <button onClick={handleClick}> Delete Movie
 </button>    </div>
   );
 };
